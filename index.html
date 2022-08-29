@@ -13,10 +13,7 @@
     <header>
         <div class="cabeçalho">
             <img src="imagens/header-cbjr.png" alt="Chorão">
-            <span id="burguer" class="material-icons">
-                menu
-            </span>
-            <nav>
+            <nav id="menu">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Biografia</a></li>
@@ -24,6 +21,9 @@
                     <li><a href="#">Discografia</a></li>
                 </ul>
             </nav>
+            <span id="burguer" class="material-icons" onclick="clickMenu()">
+                menu
+            </span>
             <img class="cbjr-nome" src="imagens/logo-cbjr.png" alt="nome da banda">
         </div>
     </header>
@@ -98,5 +98,15 @@
     <footer>
         <p>© Copyright - Diego Santos - Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function clickMenu() {
+            if(menu.style.display == 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>

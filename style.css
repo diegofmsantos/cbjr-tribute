@@ -238,15 +238,30 @@ footer {
     #burguer {
         display: block;
         cursor: pointer;
+        width: 50px;
+        height: 25px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .cbjr-nome {
+        display: none;
+    }
+
+    .cabeçalho {
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
     }
 
     nav {
-        display: block;
+        display: none;
     }
 
     ul {
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     article img {
@@ -279,9 +294,9 @@ footer {
 
     section img {
         margin: auto;
-       width: 300px;
-       height: 250px;
-       margin-left: 50px;
+        width: 300px;
+        height: 250px;
+        margin-left: 50px;
     }
 
     footer {
