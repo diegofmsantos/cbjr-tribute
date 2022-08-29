@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="imagens/favicon-cbjr.png" type="image/x-icon">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <div class="cabeçalho">
             <img src="imagens/header-cbjr.png" alt="Chorão">
@@ -100,6 +100,15 @@
     </footer>
 
     <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 600) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+
         function clickMenu() {
             if(menu.style.display == 'none') {
                 menu.style.display = 'block'
