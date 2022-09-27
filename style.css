@@ -6,12 +6,295 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
     width: 100vw;
+    position: fixed;
+}
+
+#burguer {
+    display: none;
 }
 
 .cabeçalho {
+    height: 100px;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+
+.logo-header, .logo-header img, .logo-header2, .logo-header2 img {
+    width: 80px;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul  {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.banner-cbjr {
+    height: calc(100vh + 200px);
+    background-image: url('imagens/banner-cbjr.png');
+    background-size: cover;
+    background-position: top;
+}
+
+main {
+    background-color: #000;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background-color: #FFF;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.bio-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.bio-text h2 {
+    margin-bottom: 10px;
+}
+
+.bio-text p {
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 23px;
+}
+
+.img-perfil {
+    flex: 1;
+    width: 400px;
+    height: 350px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.polemicas {
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.bio-text1 {
+    flex: 1;
+    display: flex;
+}
+
+.bio-text-area p {
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 23px;
+}
+
+.bio-text-area {
+    flex: 1;
+    padding: 20px;
+}
+
+.bio-text-area h2 {
+    margin-bottom: 20px;
+}
+
+.bio-text-area h3 {
+    margin-bottom: 10px;
+}
+
+.img-perfil-pol {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+}
+
+.img-perfil-pol img {
+    width: 400px;
+    height: 300px;
+    
+}
+
+.bio-text2 {
+    flex: 1;
+    display: flex;
+}
+
+.bio-text2 .bio-text-area p {
+    text-align: justify;
+    line-height: 23px;
+}
+
+aside {
+    background-image: url('imagens/discografia-cbjr-discos.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+}
+
+.content {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.699);
+    color: #FFF;
+}
+
+.content ul {
+    margin-bottom: 50px;
+}
+
+.content ul li {
+    list-style: none;
+}
+
+.content h2 {
+    margin: 30px 0px;
+}
+
+.content h3 {
+    margin-bottom: 15px;
+}
+
+footer {
+    max-width: 1100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-weight: bold;
+    font-style: italic;
+}
+
+@media screen and (max-width: 769px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    nav ul {
+        position: absolute;
+        z-index: 99;
+        top: 100px;
+        right: 0;
+        width: 40%;
+        height: calc(50vh - 100px);
+        flex-direction: column;
+        background-color: #f7f7f7b9;
+        font-weight: bold;
+    }
+
+    nav ul li {
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid black;
+    }
+
+    nav ul li a {
+        font-size: 25px;
+    }
+
+    .logo-header2 {
+        display: none;
+    }
+
+    #burguer {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+
+    .cabeçalho {
+        width: auto;
+        justify-content: space-around;
+    }
+
+    article {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .img-perfil img {
+        width: 400px;
+        height: 350px;
+        margin-top: 30px;
+    }
+
+    .bio-text1, .bio-text2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .polemicas {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .img-perfil img {
+        width: 350px;
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    .img-perfil-pol img {
+        width: 350px;
+        height: 300px;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
 }
