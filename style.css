@@ -15,6 +15,9 @@ body {
 header {
     font-family: 'Rock Salt', cursive;
     background-color: white;
+    position: fixed;
+    z-index: 99;
+    width: 100vw;
 }
 
 #burguer {
@@ -73,6 +76,8 @@ nav ul li a {
 .banner-cbjr {
     width: 100%;
     height: 700px;
+    position: absolute;
+    top: 100px;
     background-image: url('imagens/banner-cbjr.png');
     background-position: center center;
     background-size: cover;
@@ -148,10 +153,11 @@ aside img {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
-    height: 30px;
-    padding-left: 200px;
-    padding-top: 20px;
+    height: 50px;
     font-weight: bold;
     font-style: italic;
     border-top: 1px solid rgba(0, 0, 0, 0.664);
@@ -228,9 +234,6 @@ footer {
         margin: auto;
     }
 
-    footer {
-        width: auto;
-    }
 }
 
 @media screen and (max-width: 740px) {
@@ -283,10 +286,6 @@ footer {
        margin-left: 100px;
     }
 
-    footer {
-        margin: auto;
-        padding-left: 60px;
-    }
 
 }
 
@@ -313,6 +312,11 @@ footer {
     .content ul {
         font-size: 16px;
         text-align: left;
+    }
+
+    footer {
+        display: flex;
+        font-size: 26px;
     }
 
 }
